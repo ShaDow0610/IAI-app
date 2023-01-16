@@ -1,9 +1,14 @@
 <template>
-        <Header class="">
-                <logo class=""/>
-                <i class="bi bi-list toggle-sidebar-btn d-flex" @click="ToggleSideBar"></i>
-                <search-bar class=" "/>
-                <Nav/>
+        <Header class="row align-items-end">
+            <div class="col-12">
+                <logo class="align-self-center"/>
+            </div>
+            <div class=" row col-12">
+                <i class="bi bi-list toggle-sidebar-btn col-lg-4 px-0 sho shoc" @click="ToggleSideBar"></i>
+                <search-bar :search="search" class="col-lg-4 px-0 pb-1 shoc"/>
+                <Nav :cherche="chercher" class="d-flex col-lg-4 px-0 pt-1 justify-content-end sho shoc"/>
+            </div>
+                
         </Header>
         <transition name="slide-fade">
             <Sidebar v-if="ShowSideBar" class="Sidebar fade-right">
@@ -25,16 +30,36 @@ export default {
     data(){
         return{
             ShowSideBar:false,
+            search:true
         }
     },
     methods:{
         ToggleSideBar(){
             this.ShowSideBar=!this.ShowSideBar
+        },
+        chercher(){
+        this.search=!this.search
         }
     }
 }
 </script>
 <style>
+    @media (width>=1099px) {
+        .shoc{
+            flex: 0 0 auto !important;
+            width: 33.33333% !important;
+        }
+    }
+    @media (width<=1098px){
+        .sho{
+            flex: 0 0 auto !important;
+            width: 50% !important;
+            padding-top:0px ;
+            padding-bottom:0px ;
+        }
+        
+    }
+
 
     .slide-fade-enter-active {
         transition: all 0.5s ease-out;

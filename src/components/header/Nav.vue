@@ -1,14 +1,14 @@
 <template>
-   <nav class="header-nav ms-auto">
+   <nav class="header-nav page">
       <ul class="d-flex align-items-center">
 
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
+        <li class="nav-item show" v-if="connecter">
+          <a class="nav-link nav-icon search-bar-toggle " @click="this.cherche" href="#">
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" v-if="connecter">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
@@ -83,7 +83,7 @@
 
         </li><!-- End Notification Nav -->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" v-if="connecter">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
@@ -149,7 +149,7 @@
 
         </li><!-- End Messages Nav -->
 
-        <li class="nav-item dropdown pe-3">
+        <li class="nav-item dropdown pe-3" v-if="connecter">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
@@ -205,10 +205,101 @@
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
 
+        <li class="nav-item dropdown pe-3" v-if="!connecter">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span class="d-none d-md-block ps-2">Se connecter</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <!-- <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li> -->
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Portaille Etudiant</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Portaille Administratif</span>
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-person"></i>
+                <span>Autre Portaille</span>
+              </a>
+            </li>
+
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            
+          </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+
+
       </ul>
     </nav><!-- End Icons Navigation -->
 </template>
+<script>
+
+
+export default {
+  props:['cherche'],
+  data(){
+    return{
+      connecter:false,
+    }
+  },
+  methods:{
+    
+  }
+}
+</script>
 <style scoped>
+  @media (min-width: 992px){
+    
+  }
+  @media (width<=1099px) {
+    .show{
+      display: block;
+      }
+      .page{
+      padding-top: 0px !important;
+    }
+  }
+  @media (width>=1099px) {
+    .show{
+      display: none;
+      }
+  }
 .header-nav ul {
   list-style: none;
 }
@@ -220,13 +311,13 @@
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #012970;
+  color: #fcee22;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #012970;
+  color: #fcee22;
 }
 
 .header-nav .nav-profile img {
@@ -344,6 +435,28 @@
 
 .header-nav .profile .dropdown-item:hover {
   background-color: #f6f9ff;
+}
+
+@media (max-width: 1199px) {
+  .header .search-bar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(1, 41, 112, 0.1);
+    background: white;
+    z-index: 9999;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .header .search-bar-show {
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 </style>

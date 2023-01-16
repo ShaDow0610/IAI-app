@@ -36,9 +36,7 @@ export default {
         background-color: #fff;
     }
         @media (max-width: 1199px) {
-        .sidebar {
-            left: -300px;
-        }
+
         }
 
         .sidebar::-webkit-scrollbar {
