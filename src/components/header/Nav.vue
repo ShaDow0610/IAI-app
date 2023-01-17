@@ -2,13 +2,13 @@
    <nav class="header-nav page">
       <ul class="d-flex align-items-center">
 
-        <li class="nav-item show" v-if="connecter">
-          <a class="nav-link nav-icon search-bar-toggle " @click="this.cherche" href="#">
+        <li class="nav-item showSearchBar" >
+          <a class="nav-link nav-icon search-bar-toggle "  @click="this.cherche" href="#">
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown" v-if="connecter">
+        <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
@@ -83,7 +83,7 @@
 
         </li><!-- End Notification Nav -->
 
-        <li class="nav-item dropdown" v-if="connecter">
+        <li class="nav-item dropdown" >
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
@@ -149,7 +149,7 @@
 
         </li><!-- End Messages Nav -->
 
-        <li class="nav-item dropdown pe-3" v-if="connecter">
+        <li class="nav-item dropdown pe-3" >
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
@@ -204,67 +204,6 @@
 
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-
-        <li class="nav-item dropdown pe-3" v-if="!connecter">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-box-arrow-in-right"></i>
-            <span class="d-none d-md-block ps-2">Se connecter</span>
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <!-- <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li> -->
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>Portaille Etudiant</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>Portaille Administratif</span>
-              </a>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-person"></i>
-                <span>Autre Portaille</span>
-              </a>
-            </li>
-
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            
-          </ul><!-- End Profile Dropdown Items -->
-          </li><!-- End Profile Nav -->
-
-
       </ul>
     </nav><!-- End Icons Navigation -->
 </template>
@@ -275,7 +214,7 @@ export default {
   props:['cherche'],
   data(){
     return{
-      connecter:false,
+      connecter:true,
     }
   },
   methods:{
@@ -288,7 +227,7 @@ export default {
     
   }
   @media (width<=1099px) {
-    .show{
+    .showSearchBar{ 
       display: block;
       }
       .page{
@@ -296,8 +235,8 @@ export default {
     }
   }
   @media (width>=1099px) {
-    .show{
-      display: none;
+    .showSearchBar{
+      display: none ;
       }
   }
 .header-nav ul {
@@ -311,13 +250,13 @@ export default {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #fcee22;
+  color: #012970;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #fcee22;
+  color: #012970;
 }
 
 .header-nav .nav-profile img {

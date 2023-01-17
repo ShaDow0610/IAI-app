@@ -25,7 +25,7 @@ export default {
  
   .header .search-bar {
     position: fixed;
-    top: 140px;
+    top: -110px;
     left: 0;
     right: 0;
     padding: 10px;
@@ -40,7 +40,7 @@ export default {
   }
 
   .header .search-bar-show {
-    top: 60px;
+    top: 100px;
     visibility: visible;
     opacity: 1;
   }
@@ -73,23 +73,17 @@ export default {
         ecrant tablette
  **************************************************************************************************/
  @media(992px >= width >= 768px) {
-    .search-bar{
-      
-    }
+  
 }
 /*****************************************************************************************
         ecrant telephone
  **************************************************************************************************/
  @media(width <= 768px) {
-    .header{
-
-    }
+    
 }
 
 @media(width >= 1200px) {
-    .header{
-
-    }
+    
 }
 
 .header .search-form {
