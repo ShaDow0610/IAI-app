@@ -11,22 +11,22 @@
                 
         </Header>
         <transition name="slide-fade">
-            <Sidebar v-if="ShowSideBar" class="Sidebar fade-right">
-
-            </Sidebar>
+            <Sidebar v-if="ShowSideBar" class="Sidebar fade-right"/>
         </transition>
         
 </template>
 
 <script>
-import Header from '@/components/header/Header';
-import Logo from "@/components/header/Logo.vue"
-import SearchBar from "@/components/header/SearchBar.vue";
-import Nav from '@/components/header/Nav.vue';
-import Sidebar from '@/components/sidebar/Sidebar.vue';
+import Header from '@/components/Layout/header/Header.vue';
+import Logo from "@/components/Layout/header/Logo.vue"
+import SearchBar from "@/components/Layout/header/SearchBar.vue";
+import Nav from '@/components/Layout/header/Nav.vue';
+import Sidebar from '@/components/Layout/sidebar/Sidebar.vue';
+import NotreUniversite from '@/components/Layout/sidebar/NotreUniversite.vue';
+
 
 export default {
-    components:{ Header ,Logo,SearchBar,Nav,Sidebar} ,
+    components:{ Header ,Logo,SearchBar,Nav,Sidebar,NotreUniversite} ,
     data(){
         return{
             ShowSideBar:false,
@@ -99,6 +99,6 @@ export default {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: #012970;
+  color: #1e2023;
 }
 </style>

@@ -2,17 +2,17 @@
    <nav class="header-nav page">
       <ul class="d-flex align-items-center">
 
-        <li class="nav-item showSearchBar" >
+        <li class="nav-item showSearchBar" v-if="connected">
           <a class="nav-link nav-icon search-bar-toggle "  @click="this.cherche" href="#">
-            <i class="bi bi-search"></i>
+            <i class="bi bi-search" ></i>
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" v-if="connected">
 
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown" >
             <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
+            <span class="badge  badge-number" style="background:rgb(199, 171, 100)">4</span>
           </a><!-- End Notification Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -83,11 +83,11 @@
 
         </li><!-- End Notification Nav -->
 
-        <li class="nav-item dropdown" >
+        <li class="nav-item dropdown" v-if="connected" >
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
+            <span class="badge  badge-number" style="background:rgb(199, 171, 100)">3</span>
           </a><!-- End Messages Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
@@ -149,7 +149,7 @@
 
         </li><!-- End Messages Nav -->
 
-        <li class="nav-item dropdown pe-3" >
+        <li class="nav-item dropdown pe-3" v-if="connected">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
@@ -204,6 +204,72 @@
 
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
+
+        <li class="nav-item dropdown pe-3" v-if="!connected">
+
+          <a class="nav-link nav-log-in d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-box-arrow-in-right "></i>
+            <span class="d-none d-md-block ps-2">Se Connecter</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <!-- <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li> -->
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Protaille Etudiant</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Portaille Aministratif</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Autre Acces</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Bessoin d'aide?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <!-- <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li> -->
+
+          </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
       </ul>
     </nav><!-- End Icons Navigation -->
 </template>
@@ -214,7 +280,7 @@ export default {
   props:['cherche'],
   data(){
     return{
-      connecter:true,
+      connected:true,
     }
   },
   methods:{
@@ -250,13 +316,13 @@ export default {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #012970;
+  color: green;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #012970;
+  color: black;
 }
 
 .header-nav .nav-profile img {
@@ -266,6 +332,17 @@ export default {
 .header-nav .nav-profile span {
   font-size: 14px;
   font-weight: 600;
+}
+.nav-log-in  span{
+  font-size: 19px;
+  font-weight: 600;
+  max-height: 36px;
+}
+.nav-log-in i{
+  font-size: 27px;
+  max-height: 40px;
+  font-weight: bold;
+  color: green;
 }
 
 .header-nav .badge-number {

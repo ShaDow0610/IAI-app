@@ -1,6 +1,6 @@
 <template>
-     <div class="search-bar"  :class="[this.search ? !this.search:'search-bar-show']">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
+     <div class="search-bar"  :class="[this.search ? !this.search:'search-bar-show']" >
+      <form class="search-form d-flex align-items-center" method="POST" action="#" v-if="conneceted">
         <input type="text" name="query" placeholder="Search" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
       </form>
@@ -9,9 +9,11 @@
 <script>
 export default {
   props:['search'],
-  setup() {
-    
-  },
+ data(){
+   return{
+    conneceted:true,
+   }
+ }
 }
 </script>
 <style scoped>
