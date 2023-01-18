@@ -22,11 +22,10 @@ import Logo from "@/components/Layout/header/Logo.vue"
 import SearchBar from "@/components/Layout/header/SearchBar.vue";
 import Nav from '@/components/Layout/header/Nav.vue';
 import Sidebar from '@/components/Layout/sidebar/Sidebar.vue';
-import NotreUniversite from '@/components/Layout/sidebar/NotreUniversite.vue';
 
 
 export default {
-    components:{ Header ,Logo,SearchBar,Nav,Sidebar,NotreUniversite} ,
+    components:{ Header ,Logo,SearchBar,Nav,Sidebar} ,
     data(){
         return{
             ShowSideBar:false,

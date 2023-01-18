@@ -254,12 +254,13 @@ export default {
         }
 
         .sidebar-nav .nav-link.collapsed {
-        color: #012970;
+        color: black;
         background: #fff;
+        background: #f6f9ff;
         }
 
         .sidebar-nav .nav-link.collapsed i {
-        color: #899bbd;
+        color: rgb(199, 171, 100);
         }
 
         .sidebar-nav .nav-link:hover {
@@ -269,6 +270,9 @@ export default {
         }
 
         .sidebar-nav .nav-link:hover i {
+        color: green;
+        }
+        .sidebar-nav .nav-link:active i {
         color: green;
         }
 
@@ -292,7 +296,7 @@ export default {
         align-items: center;
         font-size: 14px;
         font-weight: 600;
-        color: #012970;
+        color: black;
         transition: 0.3;
         padding: 10px 0 10px 40px;
         transition: 0.3s;
@@ -307,11 +311,11 @@ export default {
 
         .sidebar-nav .nav-content a:hover,
         .sidebar-nav .nav-content a.active {
-        color: #4154f1;
+        color: green;
         }
 
         .sidebar-nav .nav-content a.active i {
-        background-color: #4154f1;
+        background-color: green;
         }
 
 </style>
