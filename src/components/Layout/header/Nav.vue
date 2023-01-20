@@ -207,7 +207,7 @@
 
         <li class="nav-item dropdown pe-3" v-if="!connected">
 
-          <a class="nav-link nav-log-in d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link nav-log-in d-flex align-items-center pe-0" href="" data-bs-toggle="dropdown">
             <i class="bi bi-box-arrow-in-right "></i>
             <span class="d-none d-md-block ps-2">Se Connecter</span>
           </a><!-- End Profile Iamge Icon -->
@@ -222,30 +222,30 @@
             </li> -->
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <router-link class="dropdown-item d-flex align-items-center" to="/login">
                 <i class="bi bi-person"></i>
                 <span>Protaille Etudiant</span>
-              </a>
+              </router-link>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <router-link class="dropdown-item d-flex align-items-center" to="/login">
                 <i class="bi bi-person"></i>
                 <span>Portaille Aministratif</span>
-              </a>
+              </router-link>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <router-link class="dropdown-item d-flex align-items-center" to="/login">
                 <i class="bi bi-person"></i>
                 <span>Autre Acces</span>
-              </a>
+              </router-link>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -280,7 +280,7 @@ export default {
   props:['cherche'],
   data(){
     return{
-      connected:true,
+      connected:false,
     }
   },
   methods:{

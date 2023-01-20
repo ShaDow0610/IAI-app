@@ -34,17 +34,17 @@
     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
         <a href="components-alerts.html">
-          <i class="bi bi-circle"></i><span>classe</span>
+          <i class="bi bi-chat-left-text"></i><span>classe</span>
         </a>
       </li>
       <li>
         <a href="components-badges.html">
-          <i class="bi bi-circle"></i><span>forum</span>
+          <i class="bi bi-globe "></i><span>forum</span>
         </a>
       </li>
       <li>
         <a href="components-badges.html">
-          <i class="bi bi-circle"></i><span>COMEL</span>
+          <i class="bi bi-chat-square-text"></i><span>COMEL</span>
         </a>
       </li>
     </ul>
@@ -127,13 +127,13 @@
   </li><!-- End Error 404 Page Nav -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="pages-register.html">
-      <i class="bi bi-card-list"></i>
+      <i class="bi bi-binoculars"></i>
       <span>Surveillance</span>
     </a>
   </li><!-- End Register Page Nav -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="pages-blank.html">
-      <i class="bi bi-file-earmark"></i>
+      <i class="bi bi-cash-coin"></i>
       <span>Comptabiliter</span>
     </a>
   </li><!-- End Blank Page Nav -->
@@ -157,6 +157,9 @@ export default {
 }
 </script>
 <style>
+      a{
+        text-decoration: none !important;
+      }
      .sidebar {
         position: fixed;
         top: 120px;
@@ -185,13 +188,13 @@ export default {
         .sidebar::-webkit-scrollbar-thumb {
         background-color: #aab7cf;
         }
-        @media (min-width: 1200px) {
+        /* @media (min-width: 1200px) {
 
         #main,
         #footer {
         margin-left: 300px;
         }
-        }
+        } */
 
         @media (max-width: 1199px) {
         .toggle-sidebar .sidebar {
@@ -242,7 +245,7 @@ export default {
         font-weight: 600;
         color: black;
         transition: 0.3;
-        background: #f6f9ff;
+        background: #fffcf6;
         padding: 10px 15px;
         border-radius: 4px;
         }
@@ -255,8 +258,7 @@ export default {
 
         .sidebar-nav .nav-link.collapsed {
         color: black;
-        background: #fff;
-        background: #f6f9ff;
+        background: #fffcf6;
         }
 
         .sidebar-nav .nav-link.collapsed i {
@@ -265,7 +267,7 @@ export default {
 
         .sidebar-nav .nav-link:hover {
         color: rgb(28, 29, 28);
-        background: #f6f9ff;
+        background: #f6fff6;
         font-size: 16px;
         }
 
@@ -303,7 +305,7 @@ export default {
         }
 
         .sidebar-nav .nav-content a i {
-        font-size: 6px;
+        font-size: 15px;
         margin-right: 8px;
         line-height: 0;
         border-radius: 50%;
@@ -312,10 +314,13 @@ export default {
         .sidebar-nav .nav-content a:hover,
         .sidebar-nav .nav-content a.active {
         color: green;
+        background: #f6fff6;
+
         }
 
         .sidebar-nav .nav-content a.active i {
         background-color: green;
+        background: #f6fff6;
         }
 
 </style>

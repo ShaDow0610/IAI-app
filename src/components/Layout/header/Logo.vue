@@ -50,5 +50,10 @@ export default {
 .color3{
   color: black;
 }
+a{
+  color:black;
+  text-decoration: none repeat;
+
+}
 
 </style>
