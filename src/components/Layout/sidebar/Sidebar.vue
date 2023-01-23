@@ -50,14 +50,14 @@
     </ul>
   </li><!-- End Components Nav -->
   <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+    <a  class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-people"></i><span>Clubs</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="forms-elements.html">
+        <router-link to="/ClubJournal">
           <i class="bi bi-circle"></i><span>Club 1</span>
-        </a>
+        </router-link>
       </li>
       <li>
         <a href="forms-layouts.html">
@@ -74,22 +74,22 @@
   
  
   <li class="nav-item">
-    <a class="nav-link " href="index.html">
+    <router-link to="/" class="nav-link " href="index.html">
       <i class="bi bi-grid"></i>
       <span>Comiter des Etudiant</span>
-    </a>
+    </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link " href="index.html">
+    <router-link to="/" href="index.html">
       <i class="bi bi-grid"></i>
       <span>Espace de Delegue</span>
-    </a>
+    </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link " href="index.html">
+    <router-link to="/" class="nav-link " href="index.html">
       <i class="bi bi-grid"></i>
       <span>Espace de sous Delegue</span>
-    </a>
+    </router-link>
   </li><!-- End Dashboard Nav -->
 
   <li class="nav-item">

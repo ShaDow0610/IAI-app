@@ -139,7 +139,6 @@ export default {
     transition: 0.7s;
 } 
 .responsive2{
- 
     transition: 0.7s;
 }
 
