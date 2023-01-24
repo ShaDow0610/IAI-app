@@ -57,6 +57,7 @@ export default {
     methods:{
         ToggleSideBar(){
             this.ShowSideBar=!this.ShowSideBar
+            
         },
         chercher(){
             this.search=!this.search

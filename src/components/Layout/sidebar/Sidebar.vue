@@ -80,7 +80,7 @@
     </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <router-link to="/" href="index.html">
+    <router-link to="/" class="nav-link " href="index.html">
       <i class="bi bi-grid"></i>
       <span>Espace de Delegue</span>
     </router-link>
