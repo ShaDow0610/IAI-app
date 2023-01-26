@@ -10,10 +10,10 @@
     </a>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link " href="index.html">
+    <router-link to="/TimesTable" class="nav-link " >
       <i class="bi bi-calendar-week"></i>
       <span>Emplois du temps</span>
-    </a>
+    </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
     <a class="nav-link " href="index.html">
@@ -24,7 +24,7 @@
   <li class="nav-item">
     <a class="nav-link " href="index.html">
       <i class="bi bi-book-half"></i>
-      <span>Devoir</span>
+      <span>Devoir & Exposer</span>
     </a>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">

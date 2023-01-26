@@ -1,25 +1,13 @@
 <template>
-        <Header class="row align-items-end">
-            <div class="col-12">
-                <logo class="align-self-center"/>
-            </div>
-            <div class=" row col-12">
-                <i class=" toggle-sidebar-btn col-lg-4 px-0 sho shoc" @click="ToggleSideBar" :class="[!ShowSideBar ? ShowSideBar:'bi bi-x-lg ','bi bi-list ']"></i>
-                <search-bar :search="search" class="col-lg-4 px-0 pb-1 shoc"/>
-                <Nav :cherche="chercher" class="d-flex col-lg-4 px-0 pt-1 justify-content-end sho shoc"/>
-            </div>  
-        </Header>
-        <transition name="slide-fade">
-            <Sidebar v-if="ShowSideBar" class="Sidebar fade-right"/>
-        </transition>
+        <headerB :ShowSideBar="ShowSideBar" :Toggeler="ToggleSideBar"/>
         
-        <main id="main" class="text-center"  data-aos="fade-in" :class="[!ShowSideBar ? ShowSideBar:'responsive','responsive2']">
-            <pageTitle/>
+        <main id="main" class="text-center"  data-aos="fade-in" :class="[!this.ShowSideBar ? this.ShowSideBar:'responsive','responsive2']">
+            <pageTitle ShowSideBar />
             <!-- ======= Breadcrumbs ======= -->
             <div class="breadcrumbs">
             <div class="container">
-                <h2>PUBLICATION</h2>
-                <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+                <h2>BIENVENUE</h2>
+                <p>ici nous vous presenton les publication les plus recente sur les activiter mener au sein de letblissement</p>
             </div>
             </div><!-- End Breadcrumbs -->
 
@@ -39,31 +27,25 @@
 </template>
 
 <script>
-import Header from '@/components/Layout/header/Header.vue';
-import Logo from "@/components/Layout/header/Logo.vue"
-import SearchBar from "@/components/Layout/header/SearchBar.vue";
-import Nav from '@/components/Layout/header/Nav.vue';
-import Sidebar from '@/components/Layout/sidebar/Sidebar.vue';
+
 import Card from '@/components/home/Card.vue';
 import pageTitle from '@/components/Layout/header/pageTitle.vue';
+import headerB from '@/components/Layout/header/headerB.vue';
 
 export default {
-    components:{ Header ,Logo,SearchBar,Nav,Sidebar,Card,pageTitle} ,
-    data(){
-        return{
-            ShowSideBar:false,
-            search:true
-        }
-    },
-    methods:{
-        ToggleSideBar(){
+   components:{pageTitle,Card,headerB},
+   data(){
+    return{
+        ShowSideBar:false,
+    }
+   },
+  methods:{
+    ToggleSideBar(){
             this.ShowSideBar=!this.ShowSideBar
             
         },
-        chercher(){
-            this.search=!this.search
-        }
-    }
+
+  }
 }
 </script>
 <style>
@@ -90,7 +72,7 @@ export default {
 
     }
     .slide-fade-leave-active {
-        transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+        transition: all 0.5s ;
 
     }
       .slide-fade-enter-from,
@@ -131,17 +113,6 @@ export default {
 
 .toggle-sidebar-inactive  {
     margin-left: 0 !important;
-}
-#main{
-    margin-top: 150px;
-}
-
-.responsive{
-    margin-left: 300px;
-    transition: 0.7s;
-} 
-.responsive2{
-    transition: 0.7s;
 }
 
 

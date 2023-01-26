@@ -280,7 +280,7 @@ export default {
   props:['cherche'],
   data(){
     return{
-      connected:false,
+      connected:true,
     }
   },
   methods:{
