@@ -12,12 +12,12 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
                         <img src="@/assets/img/1.jpg" class="img-fluid" alt="">
-                        <span>Paul Mibatket</span>
+                        <span class=" fw-light fst-italic fs-6">Paul Mibatket</span>
                     </div>
                     <div class="trainer-rank d-flex align-items-center">
-                        <i class="bi bi-person text-success" ></i>&nbsp;{{ numffolowers }}
-                        &nbsp;&nbsp;
-                        <i class="like" @click="Likes" :class="[Clicked ? !Clicked:'bi bi-heart text-success','bi bi-heart-fill text-danger' ]"></i>&nbsp;{{ numlikes }}
+                        <i class="bi bi-person text-success fw-light fs-6" ></i><span class="mx-1">{{ numffolowers }}</span>
+                        <i class="like fw-light fs-6" @click="Likes" :class="[Clicked ? !Clicked:'bi bi-heart text-success','bi bi-heart-fill text-danger' ]"></i> 
+                        <span class="mx-1"> {{ numlikes }}</span>
                     </div>
                 </div>
             </div>

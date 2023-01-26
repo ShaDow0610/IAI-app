@@ -14,16 +14,7 @@
 </transition>
 
 <main id="main" class="main" :class="[!ShowSideBar ? ShowSideBar:'responsive','responsive2']">
-<div class="pagetitle">
-<h1>Cards</h1>
-<nav>
-    <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item">Components</li>
-    <li class="breadcrumb-item active">Cards</li>
-    </ol>
-</nav>
-</div><!-- End Page Title -->
+<pageTitle/>
 
 <section class="section">
     <div class="row align-items-top">
@@ -48,9 +39,10 @@ import Sidebar from '@/components/Layout/sidebar/Sidebar.vue';
 import Card from '@/components/home/Card.vue';
 import Tools from '../dashboardTools/Tools.vue';
 import dashboardCards from '@/components/Layout/dashboardTools/dashboardCards.vue';
+import pageTitle from '../header/pageTitle.vue';
 
 export default {
-components:{ Header ,Logo,SearchBar,Nav,Sidebar,Card,Tools,dashboardCards} ,
+components:{ Header ,Logo,SearchBar,Nav,Sidebar,Card,Tools,dashboardCards,pageTitle} ,
 data(){
 return{
     ShowSideBar:false,

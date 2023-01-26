@@ -14,11 +14,11 @@
         </transition>
         
         <main id="main" class="text-center"  data-aos="fade-in" :class="[!ShowSideBar ? ShowSideBar:'responsive','responsive2']">
-
+            <pageTitle/>
             <!-- ======= Breadcrumbs ======= -->
             <div class="breadcrumbs">
             <div class="container">
-                <h2>Courses</h2>
+                <h2>PUBLICATION</h2>
                 <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
             </div>
             </div><!-- End Breadcrumbs -->
@@ -45,9 +45,10 @@ import SearchBar from "@/components/Layout/header/SearchBar.vue";
 import Nav from '@/components/Layout/header/Nav.vue';
 import Sidebar from '@/components/Layout/sidebar/Sidebar.vue';
 import Card from '@/components/home/Card.vue';
+import pageTitle from '@/components/Layout/header/pageTitle.vue';
 
 export default {
-    components:{ Header ,Logo,SearchBar,Nav,Sidebar,Card} ,
+    components:{ Header ,Logo,SearchBar,Nav,Sidebar,Card,pageTitle} ,
     data(){
         return{
             ShowSideBar:false,
