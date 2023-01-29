@@ -2,11 +2,11 @@
     <div class="card mb-3">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="@/assets/logo.png" class="img-fluid rounded-start" alt="...">
+                <img src="@/assets/img/BreakingBad3.png" class="img-fluid rounded-start" alt="...">
                 <div class="trainer-rankalign-items-center ">
                   
                 </div>
-                <div class="card" style="">
+                <div class="card mb-0x" style="">
                     <div class="card-body row">
                       <div class="card-title m-0 p-0 col-6">Commentaire</div>
                         <div class="card-subtitle  d-flex  mb-2 text-muted col-6 justify-content-end ">
@@ -17,7 +17,7 @@
                       <div>
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
                           <h4 id="scrollspyHeading1">First heading</h4>
-                          <p class="card-text mt-3 ms-3" v-for="i in 10" >
+                          <p class="card-text mt-3  ms-3" v-for="i in 10" >
                             <img  class="img"  src="@/assets/logo.png"/>
                             <span class="message p-1 m-1">message</span>
                           </p>

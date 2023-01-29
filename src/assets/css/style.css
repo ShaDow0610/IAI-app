@@ -4,6 +4,21 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+@media(550px<=width<=800px){
+  .tableResp{
+      font-size: 10px;
+  }
+}
+@media(800px<=width){
+  .tableResp{
+      font-size: 15px;
+  }
+}
+@media(width<=550px){
+  .tableResp{
+      font-size: 7px;
+  }
+}
 
 #main{
   margin-top: 150px;
@@ -25,7 +40,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  /* fo nt-family: "Open Sans", sans-serif; */
   background: #f6f9ff;
   color: #444444;
 }
@@ -41,14 +56,14 @@ a:hover {
   text-decoration: none ;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
-}
+} */
 
 /*--------------------------------------------------------------
 # Main

@@ -1,7 +1,6 @@
 <template>
-    <p>
-          
-    <button class="btn  position" type="button" data-bs-toggle="collapse" @click="tools" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <p>      
+    <button class="btn btn-outline-success  position" type="button" data-bs-toggle="collapse" @click="tools" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         <i class="" :class="[!open ? close:'bi bi-chevron-double-right','bi bi-chevron-double-left']"></i>
     </button>
     </p>
@@ -49,7 +48,7 @@ export default {
     top:122px;
     right:5px;
     color: black;
-    background-color:green;
+   
 
 }
 .position2{

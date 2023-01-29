@@ -7,48 +7,39 @@
                 <h5 class="card-title">Emplois de temps de la semaine</h5>
                 <p>Les <code>Ecris en rouge </code> represente les evaluation controlle continues et de Session Normale</p>
                 <!-- Bordered Table -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">horaire</th>
-                        <th scope="col">Lundi</th>
-                        <th scope="col">Mardi</th>
-                        <th scope="col">Mrecredi</th>
-                        <th scope="col">Jeudi</th>
-                        <th scope="col">Vendredi</th>
-                        <th scope="col">Samedi</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                <!-- End Bordered Table -->
+                <TimeTable/>
             </div>
         </div>
+        <section class="section">
+            <div class="row ">
+                <div class="col-lg-8">
+                    
+                     <!-- Default Card -->
+                    <TimesTableCards v-for="i in 10">
+                        <h5 class="card-title">Emplois de temps de la semaine</h5>
+                        <TimeTable/>
+                    </TimesTableCards>
+                   
+                    
+                </div>
+                <div class="col-lg-4"> 
+                    <TimesTabbleExamsCard/>
+                </div>
+            </div>
+            <Tools/>
+        </section>
+
     </main>
 </template>
 <script>
 import headerB from '@/components/Layout/header/headerB.vue';
 import pageTitle from '@/components/Layout/header/pageTitle.vue';
+import TimesTableCards from '@/components/Layout/Timestable/TimestableCards.vue';
+import TimesTabbleExamsCard from '@/components/Layout/Timestable/TimesTableExamsCard.vue'
+import TimeTable from '@/components/Layout/Timestable/TimeTable.vue'
+ 
 export default {
-    components:{headerB, pageTitle},
+    components:{headerB, pageTitle,TimesTableCards,TimesTabbleExamsCard,TimeTable},
     data(){
     return{
         ShowSideBar:false,
