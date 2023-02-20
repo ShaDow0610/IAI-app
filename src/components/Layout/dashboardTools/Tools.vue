@@ -10,20 +10,39 @@
                 <router-link to="ClubJournal" class="btn bgBtns fs-3 btn-lg m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
                     <i class="bi bi-files"></i>
                 </router-link>
-                <button class="btn bgBtns fs-4 btn-sm m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                <router-link to="stats" class="btn bgBtns fs-4 btn-sm m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
                     <i class="bi bi-graph-up"></i>
-                </button>
+                </router-link>
                 <router-link to="newpost" class="btn bgBtns fs-4 btn-sm m-2  p-0">
                     <i class="bi bi-plus-square"></i>
                 </router-link>
-                <button class="btn bgBtns fs-4 btn-sm m-2  p-0">
+                <router-link to="messagerie" class="btn bgBtns fs-4 btn-sm m-2  p-0">
                     <i class="bi bi-chat"></i>
-                </button><button class="btn bgBtns fs-4 btn-sm m-2  p-0">
+                </router-link>
+                <button class="btn bgBtns fs-4 btn-sm m-2  p-0" type="button" data-bs-toggle="modal" data-bs-target="#disablebackdrop">
                     <i class="bi bi-list"></i>
-                </button>
+                </button>              
+                <div class="modal fade modal-marg" id="disablebackdrop" tabindex="-1" data-bs-backdrop="false" style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title">Disabled Backdrop</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    </div>
+                </div><!-- End Disabled Backdrop Modal-->
             </div>
-        </Transition>
+        </Transition>  
     </div>
+    
 
 </template>
 <script>
@@ -43,6 +62,10 @@ export default {
 }
 </script>
 <style scoped>
+.modal-marg{
+    margin-top: 100px;
+    color:black;
+}
 .bgTools{
   color:rgb(199, 171, 100);
   background: #f6fff6;

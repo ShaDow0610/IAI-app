@@ -66,6 +66,7 @@
                             </div>
                         </div>
                     </div>
+                    <Tools/>
                 </section>
             </main>
 </template>
@@ -74,9 +75,10 @@
 import Card from '@/components/home/Card.vue';
 import pageTitle from '@/components/Layout/header/pageTitle.vue';
 import headerB from '@/components/Layout/header/headerB.vue';
+import Tools from '@/components/Layout/dashboardTools/Tools.vue'
 
 export default {
-   components:{pageTitle,Card,headerB},
+   components:{pageTitle,Card,headerB,Tools},
    data(){
     return{
         ShowSideBar:false,
@@ -92,7 +94,5 @@ export default {
 }
 </script>
 <style scoped>
-    .form-control:active{
-        
-    }
+
 </style>

@@ -4,6 +4,145 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+.bgcolor{
+  background-color: var(--bs-card-cap-bg);
+  border-right: 3px rgba(0, 0, 0, 0.637) solid;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  height:450px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent;
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+ 
+}
+.pad{
+  padding-left: 12px !important;
+}
+  
+.messages{
+  height:450px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent;
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  font-size: 90%;
+}
+.name{
+  font-size: 90%;
+}
+.heure{
+  font-size: 65%;
+}
+@media(width<=800px){
+  .messages{
+    height:450px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+    font-size: 70%;
+  }
+  .name{
+    font-size: 70%;
+  }
+  .heure{
+    font-size: 55%;
+  }
+  
+}
+.message{
+  border-radius: 15px 15px 15px 0px;
+  background:  rgba(181, 179, 179, 0.322);
+  
+}
+.contact{
+  font-size: 105%;
+  background-color:#fffcf6 !important;
+  padding-top: 3px;
+  padding-bottom:3px;
+}
+.contact:hover{
+  font-size: 105%;
+  background-color:green !important;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 2px 2px 2px 2px;
+}
+.img{
+  height:7%;
+  width:7%;
+  max-width:9%;min-width:20px
+} 
+.img1{
+
+  max-width:9%;min-width:20px
+} 
+@media(486px<=width<=1162px){
+  .intitul{
+    display:none;
+    
+  }
+  .notif-num1{
+    margin:0xp;
+    position: relative  !important;
+    left: 12px  !important;
+    top: -9px  !important;
+    border-radius: 0px 25px 0px 5px  !important;
+  }
+  .iradius{
+    margin-right:0px !important;
+    
+  }
+}
+@media(width<=486px){
+  .intitul{
+    display:none;
+    
+  }
+  .notif-num1{
+    margin:0xp;
+    position: relative  !important;
+    
+    border-radius: 0px 25px 0px 5px  !important;
+  }
+  .iradius{
+    margin-right:0px !important;
+    margin-left:0px;
+    display: block ruby;
+
+  }
+  .marg{
+    margin-left:0px;
+    margin-right:0px;
+  }
+}
+.marg{
+  margin-left:0px;
+  margin-right:0px;
+}
+.iradius{
+  border-radius: 5px 25px 0px 0px !important;
+  color:green  !important;
+  border-color: rgba(0, 128, 0, 0.11)  !important;
+  display: block ruby !important;
+  background-color:#fffcf6 !important;
+}
+.iradius:hover{
+  border-radius: 5px 25px 0px 0px  !important;
+  color:black  !important;
+  border-color: green  !important;
+  background-color: green  !important;
+}
+.radius{
+  border-radius: 20px 5px 0px 0px  !important;
+}
+.notif-num1{
+  position: relative  !important;
+  left: 12px  !important;
+  top: -10px  !important;
+  border-radius: 0px 25px 0px 5px  !important;
+}
+  
 @media(550px<=width<=800px){
   .tableResp{
       font-size: 10px;
