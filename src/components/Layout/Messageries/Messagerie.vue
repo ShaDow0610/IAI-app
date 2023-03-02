@@ -1,9 +1,9 @@
 <template>
   <div class="row">
-    <div class="col-12 card px-0">
+    <div class="col-12 card px-0 mb-0">
       <div class="card-header pb-0 px-1  ">
         <h5>Messagerie</h5>
-        <div class="row px-2">
+        <div class="row px-2 fixed">
           <div class="col-4 d-flex  justify-content-start px-0">
             <button type="button" class="btn btn-outline-secondary ms-0  iradius ">
               <i class="bi bi-star me-1 marg"></i>
@@ -51,7 +51,7 @@
             </div>    
                     
       </div>
-      <div class="card-footer m-0 p-0 " style="background-color:white">
+      <div class="card-footer mx-3 p-0 px-1 fixed-bottom" style="background-color:white">
           <div class="row ">
             <div class="col-4 d-flex justify-content-start" >
               <div class="btn btn-danger me-1">
