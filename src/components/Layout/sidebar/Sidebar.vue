@@ -16,10 +16,10 @@
     </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link " href="index.html">
+    <router-link to="/cours" class="nav-link " >
       <i class="bi bi-book"></i>
       <span>Cours</span>
-    </a>
+    </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
     <a class="nav-link " href="index.html">
