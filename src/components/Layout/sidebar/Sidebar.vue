@@ -22,10 +22,10 @@
     </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link " href="index.html">
+    <router-link to="/devoi-expo" class="nav-link ">
       <i class="bi bi-book-half"></i>
       <span>Devoir & Exposer</span>
-    </a>
+    </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -55,7 +55,7 @@
     </a>
     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <router-link to="/ClubJournal">
+        <router-link to="/clubHome">
           <i class="bi bi-circle"></i><span>Club 1</span>
         </router-link>
       </li>
@@ -80,7 +80,7 @@
     </router-link>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <router-link to="/" class="nav-link " href="index.html">
+    <router-link to="/delegueHome" class="nav-link ">
       <i class="bi bi-grid"></i>
       <span>Espace de Delegue</span>
     </router-link>
@@ -88,7 +88,7 @@
   <li class="nav-item">
     <router-link to="/" class="nav-link " href="index.html">
       <i class="bi bi-grid"></i>
-      <span>Espace de sous Delegue</span>
+      <span>COMEL</span>
     </router-link>
   </li><!-- End Dashboard Nav -->
 
@@ -99,10 +99,10 @@
     </a>
   </li><!-- End Profile Page Nav -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="pages-contact.html">
+    <router-link to="/messagerie" class="nav-link collapsed">
       <i class="bi bi-envelope"></i>
       <span>Messagerie</span>
-    </a>
+    </router-link>
   </li><!-- End Contact Page Nav -->
 
   <li class="nav-heading">Aministration</li>

@@ -7,7 +7,7 @@
     <div class="collapse" id="collapseExample">
         <Transition name="slide-fade">
             <div class="card card-body position2 p-0 mb-0 bgTools" v-if="show">
-                <router-link to="/clusPostDetail" class="btn bgBtns fs-3 btn-lg m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                <router-link to="/Chat" class="btn bgBtns fs-3 btn-lg m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
                     <i class="bi bi-files"></i>
                 </router-link>
                 <router-link to="stats" class="btn bgBtns fs-4 btn-sm m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
@@ -23,7 +23,7 @@
                     <i class="bi bi-list"></i>
                 </button>              
                 <div class="modal fade modal-marg" id="disablebackdrop" tabindex="-1" data-bs-backdrop="false" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog"> 
                     <div class="modal-content">
                         <div class="modal-header">
                         <h5 class="modal-title">Disabled Backdrop</h5>

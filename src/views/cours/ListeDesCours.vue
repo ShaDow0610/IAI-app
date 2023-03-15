@@ -12,6 +12,7 @@
    <section class="section">
         <div class="row">
           <coursCard/>
+          <coursCard/>
         </div>
    </section>
   </main>
