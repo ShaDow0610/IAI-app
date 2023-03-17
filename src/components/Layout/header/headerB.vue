@@ -1,5 +1,5 @@
 <template>
-    <Header class="row align-items-end">
+    <Header class="row align-items-end ">
             <div class="col-12">
                 <logo class="align-self-center"/>
             </div>

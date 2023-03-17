@@ -1,9 +1,7 @@
 <template>
-    <headerB :ShowSideBar="ShowSideBar" :Toggeler="ToggleSideBar"/>
+
         
         <main id="main" class="text-center"  data-aos="fade-in" :class="[!this.ShowSideBar ? this.ShowSideBar:'responsive','responsive2']">
-            
-           
             <Messagerie/>
 
             <tools/>
@@ -35,8 +33,8 @@ export default {
 }
 </script>
 <style scoped>
-    #main{
-        margin-top:120px !important;
-        padding: 0px;
-    }
+#main {
+    margin-top:0px !important;
+    padding: 0px;
+  }
 </style>

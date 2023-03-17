@@ -93,10 +93,10 @@
   </li><!-- End Dashboard Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="users-profile.html">
+    <router-link to="/profile" class="nav-link collapsed" >
       <i class="bi bi-person"></i>
       <span>Profile</span>
-    </a>
+    </router-link>
   </li><!-- End Profile Page Nav -->
   <li class="nav-item">
     <router-link to="/messagerie" class="nav-link collapsed">
