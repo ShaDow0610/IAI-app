@@ -13,11 +13,11 @@
                 <router-link to="stats" class="btn bgBtns fs-4 btn-sm m-2  p-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
                     <i class="bi bi-graph-up"></i>
                 </router-link>
-                <router-link to="newpost" class="btn bgBtns fs-4 btn-sm m-2  p-0">
+                <router-link to="/newpost" class="btn bgBtns fs-4 btn-sm m-2  p-0">
                     <i class="bi bi-plus-square"></i>
                 </router-link>
-                <router-link to="messagerie" class="btn bgBtns fs-4 btn-sm m-2  p-0">
-                    <i class="bi bi-chat"></i>
+                <router-link to="/classroom" class="btn bgBtns fs-4 btn-sm m-2  p-0">
+                    <i class="bi bi-person"></i>
                 </router-link>
                 <button class="btn bgBtns fs-4 btn-sm m-2  p-0" type="button" data-bs-toggle="modal" data-bs-target="#disablebackdrop">
                     <i class="bi bi-list"></i>

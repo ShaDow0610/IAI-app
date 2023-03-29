@@ -18,7 +18,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
               You have 4 new notifications
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              <router-link to="/messagerie"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></router-link>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -93,7 +93,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              <router-link to="/messagerie" ><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></router-link>
             </li>
             <li>
               <hr class="dropdown-divider">

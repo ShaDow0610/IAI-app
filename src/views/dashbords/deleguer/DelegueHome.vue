@@ -15,7 +15,7 @@
         <section id="courses" class="courses main">
             <div class="container" data-aos="fade-up">
                 <div class="row" data-aos="zoom-in" data-aos-delay="100" >
-                    <Card v-for="i in 110"/>
+                    <Card v-for="i in 50"/>
                 </div>
             </div>
             <delegueTools/>
