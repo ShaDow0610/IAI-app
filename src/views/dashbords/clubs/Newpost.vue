@@ -6,7 +6,7 @@
             <pageTitle ShowSideBar />
                 <section class="section">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-6 offset-lg-3">
                             <div class="card">
                                 <div class="card-body">
                                 <h5 class="card-title">Multi Columns Form</h5>

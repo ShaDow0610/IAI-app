@@ -1,9 +1,9 @@
 <template>
-   <nav class="header-nav page">
+   <nav class="header-nav page d-flex px-0 pt-1 justify-content-end sho shoc">
       <ul class="d-flex align-items-center">
 
         <li class="nav-item showSearchBar" v-if="connected">
-          <div class="nav-link nav-icon search-bar-toggle "  @click="this.cherche" href="#">
+          <div class="nav-link nav-icon search-bar-toggle "  @click="this.ShowSearcheBar" href="#">
             <i class="bi bi-search" ></i>
           </div>
         </li><!-- End Search Icon-->
@@ -277,7 +277,7 @@
 
 
 export default {
-  props:['cherche'],
+  props:['ShowSearcheBar'],
   data(){
     return{
       connected:true,
@@ -285,198 +285,11 @@ export default {
   },
   methods:{
     
+  },
+  onMounted(){
+    console.log("bonsoir")
   }
-}
+  }
 </script>
 <style scoped>
-  @media (min-width: 992px){
-    
-  }
-  @media (width<=1099px) {
-    .showSearchBar{ 
-      display: block;
-      }
-      .page{
-      padding-top: 0px !important;
-    }
-  }
-  @media (width>=1099px) {
-    .showSearchBar{
-      display: none ;
-      }
-  }
- 
-.header-nav ul {
-  list-style: none;
-}
-
-.header-nav>ul {
-  margin: 0;
-  padding: 0;
-}
-
-.header-nav .nav-icon {
-  font-size: 22px;
-  color: green;
-  margin-right: 25px;
-  position: relative;
-}
-
-.header-nav .nav-profile {
-  color: black;
-}
-
-.header-nav .nav-profile img {
-  max-height: 36px;
-}
-
-.header-nav .nav-profile span {
-  font-size: 14px;
-  font-weight: 600;
-}
-.nav-log-in  span{
-  font-size: 19px;
-  font-weight: 600;
-  max-height: 36px;
-}
-.nav-log-in i{
-  font-size: 27px;
-  max-height: 40px;
-  font-weight: bold;
-  color: green;
-}
-
-.header-nav .badge-number {
-  position: absolute;
-  inset: -2px -5px auto auto;
-  font-weight: normal;
-  font-size: 12px;
-  padding: 3px 6px;
-}
-
-.header-nav .notifications {
-  inset: 8px -15px auto auto !important;
-}
-
-.header-nav .notifications .notification-item {
-  display: flex;
-  align-items: center;
-  padding: 15px 10px;
-  transition: 0.3s;
-}
-
-.header-nav .notifications .notification-item i {
-  margin: 0 20px 0 10px;
-  font-size: 24px;
-}
-
-.header-nav .notifications .notification-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.header-nav .notifications .notification-item p {
-  font-size: 13px;
-  margin-bottom: 3px;
-  color: #919191;
-}
-
-.header-nav .notifications .notification-item:hover {
-  background-color: #f6f9ff;
-}
-
-.header-nav .messages {
-  inset: 8px -15px auto auto !important;
-}
-
-.header-nav .messages .message-item {
-  padding: 15px 10px;
-  transition: 0.3s;
-}
-
-.header-nav .messages .message-item a {
-  display: flex;
-}
-
-.header-nav .messages .message-item img {
-  margin: 0 20px 0 10px;
-  max-height: 40px;
-}
-
-.header-nav .messages .message-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #444444;
-}
-
-.header-nav .messages .message-item p {
-  font-size: 13px;
-  margin-bottom: 3px;
-  color: #919191;
-}
-
-.header-nav .messages .message-item:hover {
-  background-color: #f6f9ff;
-}
-
-.header-nav .profile {
-  min-width: 240px;
-  padding-bottom: 0;
-  top: 8px !important;
-}
-
-.header-nav .profile .dropdown-header h6 {
-  font-size: 18px;
-  margin-bottom: 0;
-  font-weight: 600;
-  color: #444444;
-}
-
-.header-nav .profile .dropdown-header span {
-  font-size: 14px;
-}
-
-.header-nav .profile .dropdown-item {
-  font-size: 14px;
-  padding: 10px 15px;
-  transition: 0.3s;
-}
-
-.header-nav .profile .dropdown-item i {
-  margin-right: 10px;
-  font-size: 18px;
-  line-height: 0;
-}
-
-.header-nav .profile .dropdown-item:hover {
-  background-color: #f6f9ff;
-}
-
-@media (max-width: 1199px) {
-  .header .search-bar {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    box-shadow: 0px 0px 15px 0px rgba(1, 41, 112, 0.1);
-    background: white;
-    z-index: 9999;
-    transition: 0.3s;
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .header .search-bar-show {
-    top: 60px;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-.nav-link{
-  cursor:pointer;
-}
-
 </style>

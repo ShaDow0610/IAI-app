@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
+    <div class="MessageContainer">
         <img src="logo.png" alt="Logo">
         <div class="input-group mt-3 rounded">
             <input type="text" class="form-control" placeholder="Recherche">
-            <button class="btn input-group-addon "><i class="bi bi-search"></i></button>
+            <button class="btn message-input-group-addon "><i class="bi bi-search"></i></button>
         </div>
         <div class="messages mt-4">
             <div class="message-block rounded" data-conversation="conversation1">
@@ -84,7 +84,7 @@ export default {
 }
 </script>
 <style scooped>
-.container {
+.MessageContainer {
 width: 30%;
 position: fixed;
 left: 8%;
@@ -92,6 +92,11 @@ top: 0;
 bottom: 0;
 background: rgb(26, 26, 26);
 color:white;
+max-width: 720px;
+padding-right: var(--bs-gutter-x,.75rem);
+padding-left: var(--bs-gutter-x,.75rem);
+margin-right: auto;
+margin-left: auto;
 
 }
 
@@ -105,7 +110,7 @@ color:white;
 .message-block:nth-child(odd) {
     background-color: #313131;
 }
-.input-group-addon{
+.message-input-group-addon{
     color:black;
     background-color: white;
 }
@@ -114,7 +119,7 @@ color:white;
     scrollbar-width: none;
 }
 @media (max-width: 768px) {
-    .container {
+    .MessageContainer {
         width: 100%;
         position: fixed;
         max-width: unset;
@@ -125,9 +130,10 @@ color:white;
         overflow-y: auto;
         scrollbar-width: none;
     }
-    .input-group-addon{
+    .message-input-group-addon{
         color:black;
         background-color: white;
+        
     }
 }
 </style>

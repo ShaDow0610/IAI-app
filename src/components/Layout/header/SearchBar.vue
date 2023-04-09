@@ -1,5 +1,5 @@
 <template>
-     <div class="search-bar"  :class="[this.search ? !this.search:'search-bar-show']" >
+     <div class="search-bar col-lg-4 px-0 pb-1 shoc"  :class="[this.search ? !this.search:'search-bar-show']" >
       <form class="search-form d-flex align-items-center" method="POST" action="#" v-if="conneceted">
         <input type="text" name="query" placeholder="Search" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>

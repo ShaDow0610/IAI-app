@@ -1,5 +1,5 @@
 <template>
-    <header id="header" class="header fixed-top d-flex ">
+    <header id="header" class="header fixed-top d-flex row align-items-end ">
        <slot/>
     </header>
 </template>

@@ -1,12 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import PostDetails from '@/views/PostDetails.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '@/views/HomeView.vue')
   },
   {
     path: '/postdetails',
@@ -103,6 +104,22 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '@/views/dashbords/deleguer/SaleDeClasse.vue')
+  },
+  {
+    path: '/COMELHome',
+    name: 'COMELHome',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '@/views/dashbords/COMEL/COMELHome.vue')
+  },
+  {
+    path: '/Election',
+    name: 'Espace D\'ELection',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '@/views/dashbords/COMEL/Election.vue')
   },
   {
     path: '/Chat',

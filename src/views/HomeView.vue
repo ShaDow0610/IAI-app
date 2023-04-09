@@ -1,12 +1,12 @@
 <template>
-        <headerB :ShowSideBar="ShowSideBar" :Toggeler="ToggleSideBar"/>
-        
+        <div class="container">
+          <headerB :ShowSideBar="ShowSideBar" :Toggeler="ToggleSideBar"/>
         <main id="main" class="text-center"  data-aos="fade-in" :class="[!this.ShowSideBar ? this.ShowSideBar:'responsive','responsive2']">
-            <pageTitle ShowSideBar />
+            <pageTitle />
             <!-- ======= Breadcrumbs ======= -->
             <div class="breadcrumbs">
             <div class="container">
-                <h2>BIENVENUE</h2>
+                <h2></h2>
                 <p>ici nous vous presenton les publication les plus recente sur les activiter mener au sein de letblissement</p>
             </div>
             </div><!-- End Breadcrumbs -->
@@ -14,7 +14,7 @@
             <!-- ======= Courses Section ======= -->
             <section id="courses" class="courses main">
                 <div class="container" data-aos="fade-up">
-                    <div class="row" data-aos="zoom-in" data-aos-delay="100" >
+                    <div class="row d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100" >
                         <Card v-for="i in 10"/>
                     </div>
                 </div>
@@ -22,48 +22,36 @@
 
         </main><!-- End #main -->
 
+        </div>
 
         
 </template>
 
-<script>
-
+<script >
 import Card from '@/components/home/Card.vue';
 import pageTitle from '@/components/Layout/header/pageTitle.vue';
 import headerB from '@/components/Layout/header/headerB.vue';
-
 export default {
+ 
    components:{pageTitle,Card,headerB},
    data(){
     return{
         ShowSideBar:false,
+        currentPath:null
     }
    },
   methods:{
     ToggleSideBar(){
             this.ShowSideBar=!this.ShowSideBar
-            
+            console.log(this.$router)
         },
+  },
+  
 
-  }
 }
 </script>
 <style>
-    @media (width>=1099px) {
-        .shoc{
-            flex: 0 0 auto !important;
-            width: 33.33333% !important;
-        }
-    }
-    @media (width<=1098px){
-        .sho{
-            flex: 0 0 auto !important;
-            width: 50% !important;
-            padding-top:0px ;
-            padding-bottom:0px ;
-        }
-        
-    }
+   
     
 
 

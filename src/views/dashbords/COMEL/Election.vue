@@ -13,12 +13,8 @@
 
         <!-- ======= Courses Section ======= -->
         <section id="courses" class="courses main">
-            <div class="container" data-aos="fade-up">
-                <div class="row d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100" >
-                    <Card v-for="i in 50"/>
-                </div>
-            </div>
-            <delegueTools/>
+            
+            <COMELTools/>
         </section><!-- End Courses Section -->
 
     </main><!-- End #main -->
@@ -29,9 +25,9 @@
 import Card from '@/components/home/Card.vue';
 import pageTitle from '@/components/Layout/header/pageTitle.vue';
 import headerB from '@/components/Layout/header/headerB.vue';
-import delegueTools from '@/components/Layout/dashboardTools/delegueTools.vue';
+import COMELTools from '@/components/Layout/dashboardTools/COMELTools.vue';
 export default {
-   components:{pageTitle,Card,headerB,delegueTools},
+   components:{pageTitle,Card,headerB,COMELTools},
    data(){
     return{
         ShowSideBar:false,
@@ -47,24 +43,7 @@ export default {
 }
 </script>
 <style>
-    @media (width>=1099px) {
-        .shoc{
-            flex: 0 0 auto !important;
-            width: 33.33333% !important;
-        }
-    }
-    @media (width<=1098px){
-        .sho{
-            flex: 0 0 auto !important;
-            width: 50% !important;
-            padding-top:0px ;
-            padding-bottom:0px ;
-        }
-        
-    }
-    
-
-
+   
     .slide-fade-enter-active {
         transition: all 0.5s ease-out;
 
@@ -178,3 +157,4 @@ export default {
 }
 
 </style>
+

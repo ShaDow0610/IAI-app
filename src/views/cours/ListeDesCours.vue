@@ -39,6 +39,9 @@ export default {
             
         },
 
-  }
+  },
+  onMounted( ){
+      console.log($router)
+    },
 }
 </script>

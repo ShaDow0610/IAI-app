@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="MessageToolBar">
         <button class="btn btn-primary  p-0 logo_btn ">
           <router-link to="/">
               <img src="logo.png " alt="Logo" class="logo ">
@@ -13,7 +13,7 @@
       </div>
 </template>
 <style scoped>
-.sidebar {
+.MessageToolBar {
     position: fixed;
     left: 0;
     top: 0;
@@ -22,10 +22,16 @@
     transition: width 0.5s;
     background: black;
     padding: 10px;
-    
+    bottom: 0;
+    z-index: 996;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1b1b1b transparent;
+    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+        
   }
 
-  .sidebar:hover {
+  .MessageToolBar:hover {
     width: 15%;
     
   }
@@ -40,7 +46,7 @@
     background-color: black; 
   }
 
-  .sidebar button {
+  .MessageToolBar button {
     display: block;
     width: 100%;
     padding: auto ;
@@ -51,23 +57,23 @@
     border-color: rgb(24, 24, 24);
     margin-bottom: 45px;
   }
-  .sidebar button:hover {
+  .MessageToolBar button:hover {
     
     background-color: rgb(48, 48, 48);
     border-color: rgb(48, 48, 48);
   }
   
-  .sidebar:hover button span {
+  .MessageToolBar:hover button span {
     display:inline;
     
   }
   
-  .sidebar button span {
+  .MessageToolBar button span {
     display:none;
   }
   
   @media (max-width: 768px) {
-    .sidebar {
+    .MessageToolBar {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -80,14 +86,14 @@
       top: unset;
       transition: none;
     }
-    .sidebar:hover button span {
+    .MessageToolBar:hover button span {
     display:none !important;
   }
-  .sidebar button span {
+  .MessageToolBar button span {
     display:none !important;
   }
     
-    .sidebar button {
+    .MessageToolBar button {
     display: block;
     width: 50%;
     margin-bottom: 20px;

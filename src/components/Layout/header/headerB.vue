@@ -1,18 +1,21 @@
 <template>
-    <Header class="row align-items-end ">
+    <div class="container">
+        <Header>
             <div class="col-12">
-                <logo class="align-self-center"/>
+                <logo/>
             </div>
             <div class=" row col-12">
                 <i class=" toggle-sidebar-btn col-lg-4 px-0 sho shoc" @click="this.Toggeler" :class="[!this.ShowSideBar ? this.ShowSideBar:'bi bi-x-lg ','bi bi-list ']"></i>
-                <search-bar :search="search" class="col-lg-4 px-0 pb-1 shoc"/>
-                <Nav :cherche="chercher" class="d-flex col-lg-4 px-0 pt-1 justify-content-end sho shoc"/>
+                <search-bar :search="search"/>
+                <Nav :ShowSearcheBar="chercher"/>
 
             </div>  
         </Header>
         <transition name="slide-fade">
-            <Sidebar v-if="this.ShowSideBar" class="Sidebar fade-right"/>
+            <Sidebar v-if="this.ShowSideBar"/>
         </transition>
+    </div>
+  
 
 
 </template>
@@ -35,6 +38,7 @@ export default {
     methods:{
         chercher(){
             this.search=!this.search
+            console .log(this.search)
         },
     }
 }
