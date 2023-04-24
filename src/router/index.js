@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory,  } from 'vue-router'
 
 const routes = [
   {
@@ -111,16 +111,17 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/dashbords/COMEL/COMELHome.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/dashbords/COMEL/COMELHome.vue'),
   },
   {
     path: '/Election',
-    name: 'Espace D\'ELection',
+    name: 'Espace d\'ELection',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '@/views/dashbords/COMEL/Election.vue')
   },
+  
   {
     path: '/Chat',
     name: 'Chat',

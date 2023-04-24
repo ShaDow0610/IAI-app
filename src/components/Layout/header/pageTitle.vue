@@ -36,6 +36,7 @@ export default {
         console.log(this.currentPath.slice(index + 1));
         this.path=this.currentPath.slice(index + 1)
         this.title=this.$route.name
+        console.log(this.$route)
 
       }else {
         console.log('void');

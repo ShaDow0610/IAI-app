@@ -1546,8 +1546,7 @@ color: #657a6d;
 Comel tool setup 
 //////////////////////////////////////////////
 /////////////////////////////////////////////
-*/
-.modal-marg{
+*/.modal-marg{
   margin-top: 100px;
   color:black;
 }
@@ -1591,6 +1590,13 @@ transition: all 0.3s ease-out;
 .slide-fade-leave-active {
 transition: all 0.3s ease-in;
 }
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+transform: translateX(20px);
+opacity: 0;
+}
+
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {

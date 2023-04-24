@@ -16,7 +16,7 @@
                 <router-link to="/newpost" class="btn bgBtns fs-4 btn-sm m-2  p-0">
                     <i class="bi bi-plus-square"></i>
                 </router-link>
-                <router-link to="/Election" class="btn bgBtns fs-4 btn-sm m-2  p-0">
+                <router-link to="/ELection" class="btn bgBtns fs-4 btn-sm m-2  p-0">
                     <i class="bi bi-box-seam"></i>
                 </router-link>
                 <button class="btn bgBtns fs-4 btn-sm m-2  p-0" type="button" data-bs-toggle="modal" data-bs-target="#disablebackdrop">

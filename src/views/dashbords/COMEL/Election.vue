@@ -3,17 +3,79 @@
         
     <main id="main" class="text-center"  data-aos="fade-in" :class="[!this.ShowSideBar ? this.ShowSideBar:'responsive','responsive2']">
         <pageTitle ShowSideBar />
-        <!-- ======= Breadcrumbs ======= -->
-        <div class="breadcrumbs">
-        <div class="container">
-            <h2>BIENVENUE</h2>
-            <p>ici nous vous presenton les publication les plus recente sur les activiter mener au sein de letblissement</p>
-        </div>
-        </div><!-- End Breadcrumbs -->
-
         <!-- ======= Courses Section ======= -->
-        <section id="courses" class="courses main">
-            
+        <section id="courses" class="courses main-vote">
+            <div class="container d-flex justify-content-center">
+                <div class="card text-white bg-dark dashboard-vote" >
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label for="title" class="form-label">Title</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control bg-dark text-white" placeholder="Saisir du texte ici">
+                        <button class="btn btn-outline-secondary bg-dark text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">
+                          <i class="bi bi-image"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Bouton pour ajouter une description -->
+                   <div  class="d-inline-block">
+                    <button v-if="!showDescription" type="button" class="btn folder-button float-start" @click="showDescription = true">
+                        <i class="bi bi-plus"></i> Ajouter une description
+                    </button>
+                   </div>
+
+                    <!-- Champ de saisie de texte -->
+                    <div v-if="showDescription" class="d-inline-block w-100" >
+                        <textarea class="form-control my-2 bg-dark text-white"></textarea>
+                        <button type="button" class="btn folder-button float-end" @click="showDescription = false">Masquer la description</button>
+                    </div>
+                  
+                    <!-- les autre ici/\ -->
+                    <div>
+                      <label for="votingType" class="form-label text-white">Type de vote</label>
+                      <div class="container">
+                        <div class="dropdown float-start w-50">
+                          <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Voting Option
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark w-100" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i> Multiple choice</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-calendar"></i> Meeting poll</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-image"></i> Image poll</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-bar-chart"></i> Ranking poll</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>           <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Titre du modal</h5>
+                    <button type="button" class="btn-close btn-close-white rounded" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="rounded border-dashed p-5 m-5 pb-3">
+                            <label for="inputFile" class="btn  btn-lg p-3 mb-2 folder-button pb-3">
+                                <i class="bi bi-folder "></i>
+                            </label>
+                            <p>Cliquez pour télécharger ou déposez un fichier ici </p>
+                            <p>JPG, PNG ou GIF. Jusqu'à 4 Mo.</p>
+                            <input type="file" class="form-control visually-hidden" id="inputFile">
+                        </div>
+
+                      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Annuler</button>
+                        </div>  
+                    </div>
+
+                </div>
+            </div>
             <COMELTools/>
         </section><!-- End Courses Section -->
 
@@ -31,130 +93,56 @@ export default {
    data(){
     return{
         ShowSideBar:false,
+        showDescription: false,
+        showDropdown: false,
+      selectedOption: { label: "Sélectionner une option", icon: "" },
+      options: [
+        { label: "Option 1", icon: "bi bi-star-fill" },
+        { label: "Option 2", icon: "bi bi-heart-fill" },
+        { label: "Option 3", icon: "bi bi-moon-fill" }
+      ]
     }
    },
   methods:{
     ToggleSideBar(){
-            this.ShowSideBar=!this.ShowSideBar
-            
+            this.ShowSideBar=!this.ShowSideBar   
         },
-
+    toggleDropdown() {
+      this.showDropdown = !this.showDropdown;
+    },
+    selectOption(option) {
+      this.selectedOption = option;
+      this.showDropdown = false;
+    }
   }
 }
 </script>
 <style>
-   
-    .slide-fade-enter-active {
-        transition: all 0.5s ease-out;
-
+    .border-dashed{
+    border-style: dashed;
+    border-color: rgb(27, 27, 27);
+    border-width: 3px;
     }
-    .slide-fade-leave-active {
-        transition: all 0.5s ;
-
+    .dashboard-vote{
+        width: 75%;
     }
-      .slide-fade-enter-from,
-    .slide-fade-leave-to {
-    transform: translateX(-80px);
-    opacity: 0;
+    .folder-button:hover{
+        color: rgb(83, 83, 83);
     }
-    
-    /* .slide-bounce-enter-active{
-        animation: bounce-in 0.5s ;
+    .select-vote{
+        width:30%;
     }
-    .slide-bounce-leave-active{
-        animation: bounce-in 0.5s reverse;
-    }
-    @keyframes bounce-in {
-        0%{
-            transform: scale(0);
+    @media (max-width:768px){
+        .dashboard-vote{
+            width: 100%;
         }
-        50%{
-            transform: scale(1.25);
+        .main-vote{
+            margin-left: -30px;
+            margin-right: -30px;
         }
-        100%{
-            transform: scale(1);
+        .select-vote{
+            width:100%;
         }
-    } */
-
-    
-
-
-/*--------------------------------------------------------------
-# Courses
---------------------------------------------------------------*/
-
-.toggle-sidebar-inactive  {
-    margin-left: 0 !important;
-}
-
-
-.toggle-sidebar-active {
-    margin-left: 300px;
-}
-.courses .course-item {
-  border-radius: 5px;
-  border: 1px solid #eef0ef;
-}
-
-.courses .course-content {
-  padding: 15px;
-}
-
-.courses .course-content h3 {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.courses .course-content h3 a {
-  color: #37423b;
-  transition: 0.3s;
-}
-
-.courses .course-content h3 a:hover {
-  color: green;
-}
-
-.courses .course-content p {
-  font-size: 14px;
-  color: #777777;
-}
-
-.courses .course-content h4 {
-  font-size: 14px;
-  background: rgb(199, 171, 100);
-  padding: 7px 14px;
-  color: #fff;
-  margin: 0;
-}
-
-.courses .course-content .time {
-  margin: 0;
-  font-weight: 500;
-  font-size: 12px;
-  color: #37423b;
-}
-
-.courses .trainer {
-  padding-top: 15px;
-  border-top: 1px solid #eef0ef;
-}
-
-.courses .trainer .trainer-profile img {
-  max-width: 50px;
-  border-radius: 50px;
-}
-
-.courses .trainer .trainer-profile span {
-  padding-left: 10px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #5a6c60;
-}
-
-.courses .trainer .trainer-rank {
-  font-size: 18px;
-  color: #657a6d;
-}
-
+    }
 </style>
 
