@@ -12,7 +12,7 @@
                       <label for="title" class="form-label">Title</label>
                       <div class="input-group">
                         <input type="text" class="form-control bg-dark text-white" placeholder="Saisir du texte ici">
-                        <button class="btn btn-outline-secondary bg-dark text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">
+                        <button class="btn btn-outline-secondary bg-dark text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" style="z-index:3">
                           <i class="bi bi-image"></i>
                         </button>
                       </div>
